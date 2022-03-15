@@ -1,11 +1,15 @@
 const path  = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports  = {
     mode: "development",
     entry: "./src/book-entry-point.js",
     output:{
-        filename: "index.bundle.js",
+        filename: "index.bundle.[contenthash].js",
         path: path.resolve(__dirname, "bundle")
     },
+    plugins:[new HtmlWebPackPlugin({
+        template:"./src/html-templates/book-template.html"
+    })],
     module: {
         rules: [
             {
