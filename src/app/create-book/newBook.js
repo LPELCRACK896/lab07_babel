@@ -72,9 +72,14 @@ const books_availables = [
   }
 ]
 
-export const newBook = (container) =>{  
+export const newBook = (num) =>{ 
+  const book_id = "libro_"+num 
+  const container = "container_"+num 
   var book_to_add = books_availables[books_availables.length-1]
   books_availables.pop()
+
+  var book_image_element = document.getElementById(book_id)
+
 
   document.getElementById('descripcion_'+container+"p").innerHTML = book_to_add.description
 
@@ -87,10 +92,7 @@ export const newBook = (container) =>{
   var newBookSpace = document.getElementById(container)
   
   
-  var book_image_element = document.createElement("img")
-  book_image_element.setAttribute("src", "./Multimedia/"+book_to_add.image)
-  book_image_element.setAttribute("alt", "portada")
-  book_image_element.setAttribute("class", "portada_imagen")
+
   parent_container.appendChild(newBookSpace)
 
   newBookSpace.appendChild(book_image_element)
