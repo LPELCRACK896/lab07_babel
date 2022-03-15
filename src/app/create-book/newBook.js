@@ -88,7 +88,7 @@ export const newBook = (container) =>{
   
   
   var book_image_element = document.createElement("img")
-  book_image_element.setAttribute("src", "../Multimedia/"+book_to_add.image)
+  book_image_element.setAttribute("src", "./Multimedia/"+book_to_add.image)
   book_image_element.setAttribute("alt", "portada")
   book_image_element.setAttribute("class", "portada_imagen")
   parent_container.appendChild(newBookSpace)
