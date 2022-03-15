@@ -1,14 +1,10 @@
 const path  = require('path')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports  = {
     entry:
      {
          main: "./src/index.js",
 /*          book: "./src/book-entry-point.js" 
  */    },
-    plugins:[new HtmlWebPackPlugin({
-        template:"./src/html-templates/index-template.html"
-    })],
     module: {
         rules: [
             {
