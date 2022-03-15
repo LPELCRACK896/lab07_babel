@@ -1,3 +1,3 @@
 import { render_page } from "./app/books/readable-books";
-import "./CSS/readable-book-style.css"
+import "./sass/book_page_styling.scss"
 render_page("root")
