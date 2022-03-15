@@ -17,12 +17,20 @@ module.exports  = merge(common, {
         new MinCssExtractProduction({filename:"[name].[contenthash].css"}),
         new CleanWebpackPlugin(),
         new HtmlWebPackPlugin({
+            filename: 'index.html', 
             template:"./src/html-templates/index-template.html",
             minify:{
                 removeAttributeQuotes:true,
                 collapseWhitespace: true,
                 removeComments:true
-            }
+            },
+            chunks: ['main']
+
+        }), 
+        new HtmlWebPackPlugin({
+            filename: 'book.html',
+            template:"./src/html-templates/book-template.html",
+            chunks: ['book']
         })
     ],
     optimization: {

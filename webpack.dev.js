@@ -9,7 +9,15 @@ module.exports  = merge(common, {
         path: path.resolve(__dirname, "bundle")
     },
     plugins:[new HtmlWebPackPlugin({
-        template:"./src/html-templates/index-template.html"
+        filename: 'index.html',
+        template:"./src/html-templates/index-template.html",
+        chunks: ['main']
+
+    }), 
+    new HtmlWebPackPlugin({
+        filename: 'book.html',
+        template:"./src/html-templates/book-template.html",
+        chunks: ['book']
     })],
     module: {
         rules: [
