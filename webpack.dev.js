@@ -5,7 +5,24 @@ const {merge}  = require("webpack-merge")
 module.exports  = merge(common, {
     mode: "development",
     output:{
-        filename: "index.bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "bundle")
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: ["style-loader",//3. Inyecta los estilos al DOM 
+                "css-loader",//2. Convierte css a common js
+                "sass-loader"//1. Convierte sass a css
+            ]
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader",//2. Inyecta los estilos al DOM 
+                "css-loader"//1. Convierte css a common js
+            ]
+            }
+        ]
     }
 });

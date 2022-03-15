@@ -1,26 +1,31 @@
 const path  = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports  = {
-    entry: "./src/book-entry-point.js",
+    entry:
+     {
+         main: "./src/index.js",
+/*          book: "./src/book-entry-point.js" 
+ */    },
     plugins:[new HtmlWebPackPlugin({
-        template:"./src/html-templates/book-template.html"
+        template:"./src/html-templates/index-template.html"
     })],
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ["style-loader",//3. Inyecta los estilos al DOM 
-                "css-loader",//2. Convierte css a common js
-                "sass-loader"//1. Convierte sass a css
-            ]
+                test: /\.html$/i,
+                loader: "html-loader",
             },
             {
-                test: /\.css$/,
-                use: ["style-loader",//2. Inyecta los estilos al DOM 
-                "css-loader"//1. Convierte css a common js
-            ]
-            }
-       
+                test: /\.(svg|png|jpg|gif|)$/,
+                use: {
+                    loader: 'file-loader',
+                    options:{
+                        name: "[name].[hash].[ext]",
+                        outputPath: "imgs"
+
+                    }
+                  }
+            }     
         ]
     }
 }
