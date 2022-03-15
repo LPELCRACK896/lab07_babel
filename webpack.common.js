@@ -8,19 +8,12 @@ module.exports  = {
     module: {
         rules: [
             {
-                test: /\.html$/i,
+                test: /\.(html)$/i,
                 loader: "html-loader",
             },
             {
-                test: /\.(svg|png|jpg|gif|)$/,
-                use: {
-                    loader: 'file-loader',
-                    options:{
-                        name: "[name].[hash].[ext]",
-                        outputPath: "imgs"
-
-                    }
-                  }
+                type: "asset",
+                test: /\.(png|svg|jpg|jpeg|gif|jfif)$/
             }     
         ]
     }
