@@ -83,7 +83,7 @@ const myBookChapters ={
                         codigo_capitulo: "di"    
                     },
                     {
-                        name: "",
+                        name: "Seguir caminando por el bosque",
                         codigo_capitulo: "dd"    
 
                     } 
