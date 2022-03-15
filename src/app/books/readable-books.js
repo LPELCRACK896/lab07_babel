@@ -131,8 +131,8 @@ const myBookChapters ={
                 ],
             }
     
-        }
-const render_page = (chapter)=>{
+    }
+export const render_page = (chapter)=>{
     const getChapter = (chapter_code)=>{
         if(chapter_code=="root") return myBookChapters.root
         if(chapter_code=="i") return myBookChapters.i
@@ -190,8 +190,4 @@ const render_page = (chapter)=>{
             document.body.scrollTop = "0px"})
 
     }
-}
-window.onload  = () =>{
-    render_page("root")
-
 }
