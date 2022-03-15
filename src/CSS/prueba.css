@@ -1,0 +1,193 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s; }
+  .slider.round {
+    border-radius: 34px; }
+    .slider.round:before {
+      border-radius: 50%; }
+
+input:checked + .slider {
+  background-color: black; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+header {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background-image: url("https://w0.peakpx.com/wallpaper/875/839/HD-wallpaper-frozen-forest-forest-trees-fog-mist-winter-cold-graphy-snow-nature-white-bulgaria.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+  header p {
+    font-size: x-small; }
+
+#btn_back_to_biblioteca {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px #707070 solid;
+  height: 20px;
+  width: 80px;
+  text-align: center;
+  background-color: white;
+  overflow: hidden; }
+  #btn_back_to_biblioteca p {
+    margin: 0;
+    padding: 0; }
+
+#title_container {
+  width: 1100px;
+  display: flex;
+  justify-content: center; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #6782A4; }
+
+h1 {
+  color: #707070;
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif; }
+
+p {
+  font: "Arial";
+  color: #707070; }
+
+#contenedor-titulo-capitulo {
+  border-radius: 20px;
+  width: 400px;
+  height: 50px;
+  border: 1px #707070 solid;
+  background-color: white;
+  margin: 15px 2px; }
+  #contenedor-titulo-capitulo p {
+    margin-left: 5px; }
+
+#contenedor_texto {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  height: fit-content; }
+  #contenedor_texto p {
+    text-align: justify;
+    margin-right: 30px; }
+    #contenedor_texto p:hover {
+      font-size: 18px;
+      color: black; }
+
+#contenedor-decision-y-cap-anterior {
+  display: flex;
+  width: 1189px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px white solid; }
+  #contenedor-decision-y-cap-anterior .contenedor-side {
+    left: 0;
+    bottom: 0;
+    width: 120px; }
+  #contenedor-decision-y-cap-anterior #contenedor-cap-anterior {
+    border-right: 1px white solid;
+    display: flex;
+    justify-content: center; }
+    #contenedor-decision-y-cap-anterior #contenedor-cap-anterior p {
+      color: white; }
+    #contenedor-decision-y-cap-anterior #contenedor-cap-anterior:hover {
+      cursor: pointer; }
+      #contenedor-decision-y-cap-anterior #contenedor-cap-anterior:hover p {
+        font-weight: bold;
+        font-size: 30px; }
+  #contenedor-decision-y-cap-anterior #contenedor-que-haras {
+    width: 971px;
+    display: flex;
+    justify-content: center; }
+    #contenedor-decision-y-cap-anterior #contenedor-que-haras h2 {
+      color: white;
+      font-size: 40px;
+      font-family: 'Playfair Display',sans-serif;
+      margin: 20px; }
+
+#contenedor-decisiones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1189px;
+  height: 150px; }
+
+.row {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px; }
+
+.decision {
+  border-radius: 50px;
+  border: 1px #707070 solid;
+  height: 70px;
+  width: 350px;
+  text-align: center;
+  background-color: #E8E8E8;
+  overflow: hidden;
+  cursor: pointer; }
+  .decision p {
+    font-size: large; }
+  .decision:hover {
+    background-color: white; }
+    .decision:hover p {
+      font-size: larger;
+      color: black; }
+
+#proogress-bar {
+  width: 1189px;
+  height: 20px;
+  border-radius: 50px;
+  padding: 0;
+  background-color: white; }
+
+#proogress-bar-color {
+  margin: 0;
+  width: 25%;
+  height: 20px;
+  border-radius: 50px;
+  background-color: #78B1DC;
+  text-align: right; }
+  #proogress-bar-color p {
+    color: white;
+    margin-right: 10px; }

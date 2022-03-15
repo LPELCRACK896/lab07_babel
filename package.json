@@ -1,0 +1,23 @@
+{
+  "name": "lab07_babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compiler:sass": "node-sass src/sass/book_page_styling.scss src/css/prueba.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LPELCRACK896/lab07_babel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LPELCRACK896/lab07_babel/issues"
+  },
+  "homepage": "https://github.com/LPELCRACK896/lab07_babel#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
