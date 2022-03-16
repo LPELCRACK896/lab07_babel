@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compiler:sass": "node-sass src/sass/book_page_styling.scss src/css/readable-book-style.css",
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "run-babel": "babel src -d output_babel"
   },
   "repository": {
     "type": "git",

@@ -11,7 +11,7 @@ module.exports  = merge(common, {
     mode: "production",
     output:{
         filename: "[name].[contenthash].bundle.js",
-        path: path.resolve(__dirname, "bundle")
+        path: path.resolve(__dirname, "bundle_babel")
     },
     plugins:[
         new MinCssExtractProduction({filename:"[name].[contenthash].css"}),
