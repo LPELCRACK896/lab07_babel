@@ -16,7 +16,17 @@ module.exports  = {
             {
                 type: "asset",
                 test: /\.(png|svg|jpg|jpeg|gif|jfif)$/
-            }     
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
+              } 
         ]
     }
 }
